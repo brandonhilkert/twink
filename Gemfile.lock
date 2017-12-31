@@ -1,0 +1,92 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    backports (3.11.0)
+    buftok (0.2.0)
+    coderay (1.1.2)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
+    equalizer (0.0.11)
+    hashie (3.5.7)
+    http (3.0.0)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (>= 2.0.0.pre.pre2, < 3)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.0.0)
+    http_parser.rb (0.6.0)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
+    method_source (0.9.0)
+    multi_json (1.12.2)
+    multipart-post (2.0.0)
+    mustermann (1.0.1)
+    naught (1.1.0)
+    oauth (0.5.4)
+    omniauth (1.8.1)
+      hashie (>= 3.4.6, < 3.6.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-oauth (1.1.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    public_suffix (3.0.1)
+    puma (3.11.0)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
+    simple_oauth (0.3.1)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.0)
+      backports (>= 2.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.0)
+      sinatra (= 2.0.0)
+      tilt (>= 1.3, < 3)
+    thread_safe (0.3.6)
+    tilt (2.0.8)
+    twitter (6.2.0)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.11)
+      http (~> 3.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+      memoizable (~> 0.4.0)
+      multipart-post (~> 2.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  omniauth-twitter
+  pry
+  puma
+  sinatra
+  sinatra-contrib
+  twitter
+
+RUBY VERSION
+   ruby 2.4.1p111
+
+BUNDLED WITH
+   1.16.0

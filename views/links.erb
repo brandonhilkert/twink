@@ -1,0 +1,28 @@
+<div class="ph5">
+  <% @tweets.each do |tweet| %>
+    <article class="dt w-100 bb b--black-05 pb2 mt2" href="#0">
+      <div class="dtc w3 w4-ns v-mid tc">
+        <h1 class="f6 f5-ns fw6 lh-title black mv0">
+          <%= tweet.user.name %>
+        </h1>
+        <h2 class="f6 fw4 mt0 mb0 black-60">
+          @<%= tweet.user.screen_name %>
+        </h2>
+        <img src="<%= tweet.user.profile_image_url_https %>" class="pa1 ba b--black-10 br-100 mt2 w2 w3-ns h2 h3-ns"/>
+      </div>
+
+      <div class="dtc pl3">
+        <% tweet.uris.each do |uri| %>
+          <a href="<%= uri.expanded_url %>" target="_blank">
+            <%= uri.expanded_url %>
+          </a>
+          <br />
+        <% end %>
+
+        <div class="black-60 mt3">
+          <%= tweet.text %>
+        </div>
+      </div>
+    </article>
+  <% end %>
+</div>

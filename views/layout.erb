@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twink</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+  </head>
+  <body class="helvetica fw2">
+    <% if session[:authenticated] %>
+      <nav class="db dt-l w-100 border-box pa3 ph5-l">
+        <div class="db dtc-l v-mid mid-gray link w-100 w-25-l tc tl-l mb2 mb0-l">
+          <img src="<%= session[:avatar] %>" class="br-100 pa1 ba b--black-10 v-mid mr2" alt="<%= session[:screename] %>">
+          <%= session[:screename] %>
+        </div>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+          <a class="link dim dark-gray f6 f5-l dib" href="/logout" title="Logout">Logout</a>
+        </div>
+      </nav>
+    <% end %>
+    <%= yield %>
+  </body>
+
+  <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+    <small class="f6 db tc">© 2018 <b class="ttu">Big Blue Media, LLC</b>., All Rights Reserved</small>
+  </footer>
+</html>
