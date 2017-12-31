@@ -11,7 +11,7 @@
         <img src="<%= tweet.user.profile_image_url_https %>" class="pa1 ba b--black-10 br-100 mt2 w2 w3-ns h2 h3-ns"/>
       </div>
 
-      <div class="dtc pl3">
+      <div class="dtc pl3 pt3">
         <% tweet.uris.each do |uri| %>
           <a href="<%= uri.expanded_url %>" target="_blank">
             <%= uri.expanded_url %>
@@ -21,6 +21,9 @@
 
         <div class="black-60 mt3">
           <%= tweet.text %>
+          <br />
+          <br />
+          <%= tweet.created_at.strftime("%m/%d at %l:%M %p") %>
         </div>
       </div>
     </article>
